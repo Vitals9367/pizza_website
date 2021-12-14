@@ -1,0 +1,60 @@
+@import 'variables.scss';
+
+$height:50px;
+$width:300px;
+
+.notification{
+    position: fixed;
+    width: 300px;
+    height: 50px;
+    background-color: $green;
+    color: white;
+
+    top: calc($navbar_height - 20px);
+    left: calc(50% -  $width/2);
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px;
+    padding-left: 20px;
+
+    font-size: 1.3rem;
+    border: 3px solid green;
+    border-radius: 20px;
+
+    button{
+        background-color: transparent;
+        border: none;
+        padding: 10px;
+        color: white;
+        cursor: pointer;
+    }
+
+    opacity: 0;
+    
+    transition: opacity 0.2s ease-in, top 0.2s ease-in-out;
+
+    @media (max-width: 350px) {
+        $width:250px;
+        width:$width;
+        left: calc(50% -  $width/2);
+
+        font-size: 1.2rem;
+
+        button{
+            padding: 5px;
+            padding-top: 10px;
+        }
+
+    }
+    
+
+}
+
+.notification_show{
+    opacity: 1;
+    top: calc($navbar_height + 20px);
+}

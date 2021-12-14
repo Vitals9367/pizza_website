@@ -1,0 +1,25 @@
+@import 'variables.scss';
+
+.back{
+    position: fixed;
+    z-index: 999;
+    background-color: $green;
+    color: white;
+    border-radius: 100px;
+    right: 50px;
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    cursor: pointer;
+
+    border: none;
+
+    &:hover{
+        background-color: transparent;
+        color: $green;
+        outline: 4px solid $green;
+    }
+
+}

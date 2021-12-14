@@ -1,0 +1,80 @@
+@import 'variables.scss';
+
+.nav{
+
+    position: fixed;
+    z-index: 99;
+
+    color: $white;
+    width: 100%;
+    height: $navbar_height;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 $horizontal_padding;
+
+    transition: background-color ease-out 0.4s;
+}
+.logo_wrapper{
+    width: 60px;
+}
+
+.nav_logo{
+
+    width: 26px;
+    color: $white;
+    
+
+    image{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+.show_nav{
+    background-color: rgba($background_color, .85);
+}
+
+.nav_text{
+    font-family: $cursive_font;
+    font-size: 2.2rem;
+    word-spacing: 5px;
+
+    @media (max-width:700px) {
+        font-size: 1.8rem;
+    }
+
+    @media (max-width:400px) {
+        display: none;
+    }
+
+}
+
+.nav_cart{
+    color: $white;
+    background-color: transparent;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    padding: 3px;
+
+}
+
+.cartIcon{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    font-size: 1.2rem;
+    width: 60px;
+    justify-content: flex-end;
+}

@@ -1,0 +1,55 @@
+@import 'variables.scss';
+
+.cart_item{
+    display: flex;
+    
+    .cart_item_image{
+
+        position: relative;
+        width: 100px;
+        height: 100px;
+
+        image{
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+
+    .cart_item_info{
+        height: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        margin-right: 10px;
+
+    }
+
+    .cart_item_row{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .cart_crossed_price{
+            color: $red;
+            text-decoration: line-through;
+        }
+
+        button{
+            padding: 5px;
+            color: $red;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        input{
+            padding: 2px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+    }
+}

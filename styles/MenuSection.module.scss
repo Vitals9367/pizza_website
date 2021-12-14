@@ -1,0 +1,43 @@
+@import 'variables.scss';
+
+.pizzas{
+    display: flex;
+    gap: 100px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 350px;
+    padding: 0 50px 0 0;
+
+    &::-webkit-scrollbar {
+        height: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+       background: $scroll_track_color;
+       border-radius: 500px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: $scroll_thumb_color;
+        border-radius: 500px;
+    }
+    
+    &::-webkit-scrollbar-thumb:hover {
+        background: $white;
+        cursor: pointer;
+    }
+
+}
+
+.menu_topic{
+    font-family: $normal_font;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    word-spacing: 5px;
+
+    @media (max-width:600px) {
+        font-size: 1.5rem;
+    }
+
+}

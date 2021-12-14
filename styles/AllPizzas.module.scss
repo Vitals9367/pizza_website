@@ -1,0 +1,99 @@
+@import 'variables.scss';
+
+.container{
+    background-color: $background_color;
+    width: 100%;
+    min-height: 100vh;
+    padding: 90px $horizontal_padding;
+
+    .list{
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu_buttons{
+        margin-bottom: 50px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+
+    }
+
+    .menu{
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        
+        @media (max-width: 500px) {
+            flex-direction: column;
+        }
+
+    }
+
+}
+
+.menu_button{
+    display: flex;
+    gap: 20px;
+
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    min-width: 130px;
+
+    padding: 8px;
+    background-color: transparent;
+    color: $white;
+    border: solid 1.8px $white;
+
+    cursor: pointer;
+
+    font-weight: 700;
+    font-size: 1.2rem;
+
+    &:hover{
+        background-color: white;
+        color: $background_color;
+    }
+}
+
+.active{
+    background-color: $white;
+    color: $background_color;
+}
+
+.choose_field{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    height: fit-content;
+
+    label{
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+
+    select{
+        cursor: pointer;
+        height: 100%;
+        min-width: 130px;
+        background-color: $background_color;
+        color: $white;
+        font-weight: 700;
+        font-size: 1.2rem;
+        border: solid 1.8px $white;
+        padding-left: 5px;
+
+        &:focus{
+            outline: none;
+        }
+        height: 40px;
+
+    }
+}
